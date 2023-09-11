@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+    pybuntu:
+        build:
+            context: .
+            args:
+                PYCHARM_VERSION: ${PYCHARM_VERSION}
+                NOMACHINE_PACKAGE_NAME: ${NOMACHINE_PACKAGE_NAME}
+                NOMACHINE_BUILD: ${NOMACHINE_BUILD}
+        container_name: desktop
+        env_file:
+            - .env
+        environment:
+            NOMACHINE_USER: ${NOMACHINE_USER}
+            PASSWORD: ${PASSWORD}
+            XDG_RUNTIME_DIR: /home/$NOMACHINE_USER
+        ports:
+            - "4000:4000"
+            - "8080:8080"
+        cap_add:
+            - SYS_PTRACE

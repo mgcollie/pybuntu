@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Terminal
+Exec=terminator
+Terminal=false
+Type=Application
+Icon=terminator
+Categories=System;GTK;Utility;TerminalEmulator;

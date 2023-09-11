@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=PyCharm
+Exec=/usr/bin/pycharm
+Terminal=false
+Type=Application
+Icon=/usr/bin/pycharm.png
+Categories=Programming
