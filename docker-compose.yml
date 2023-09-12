@@ -8,7 +8,7 @@ services:
                 PYCHARM_VERSION: ${PYCHARM_VERSION}
                 NOMACHINE_PACKAGE_NAME: ${NOMACHINE_PACKAGE_NAME}
                 NOMACHINE_BUILD: ${NOMACHINE_BUILD}
-        container_name: desktop
+        container_name: pybuntu
         env_file:
             - .env
         environment:
