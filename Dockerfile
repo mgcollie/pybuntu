@@ -2,7 +2,7 @@
 FROM ubuntu:20.04 as base
 
 # Copy the cleanup script and make it executable
-COPY cleanup.sh /bin/cleanup
+COPY scripts/cleanup.sh /bin/cleanup
 RUN chmod 7777 /bin/cleanup
 
 # Set environment variables to non-interactive (this prevents some prompts)
@@ -85,7 +85,7 @@ RUN curl -fSL "http://download.nomachine.com/download/${NOMACHINE_BUILD}/Linux/$
     && cp /opt/pycharm-community-${PYCHARM_VERSION}/bin/pycharm.png /usr/bin/pycharm.png \
     && cleanup
 
-ADD nxserver.sh /
+ADD scripts/nxserver.sh /
 RUN chmod +x ./nxserver.sh
 COPY ./launchers/ launchers/
 CMD ["./nxserver.sh"]
