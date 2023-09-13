@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+mkdir -p /var/run/dbus
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
+dbus-daemon --system --fork
 groupadd -r $NOMACHINE_USER -g 433 \
 && useradd -u 431 -r -g $NOMACHINE_USER -d /home/$NOMACHINE_USER -s /bin/bash -c "$NOMACHINE_USER" $NOMACHINE_USER \
 && adduser $NOMACHINE_USER sudo \
