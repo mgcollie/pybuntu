@@ -86,6 +86,7 @@ RUN curl -fSL "http://download.nomachine.com/download/${NOMACHINE_BUILD}/Linux/$
     && cp /opt/pycharm-community-${PYCHARM_VERSION}/bin/pycharm.png /usr/bin/pycharm.png \
     && cleanup
 
+ADD scripts/filter_warnings.py /
 ADD scripts/nxserver.sh /
 RUN chmod +x ./nxserver.sh
 COPY ./launchers/ launchers/

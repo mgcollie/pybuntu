@@ -12,6 +12,6 @@ groupadd -r $NOMACHINE_USER -g 433 \
 && cp /launchers/* /home/$NOMACHINE_USER/Desktop \
 && chown -R $NOMACHINE_USER:$NOMACHINE_USER /home/$NOMACHINE_USER/Desktop \
 && chmod -R +x /home/$NOMACHINE_USER/Desktop \
-&& export XDG_RUNTIME_DIR=/home/$NOMACHINE_USER \
-&& /etc/NX/nxserver --startup --virtualgl
-tail -f /usr/NX/var/log/nxserver.log
+&& export XDG_RUNTIME_DIR=/home/$NOMACHINE_USER
+/etc/NX/nxserver --startup --virtualgl
+tail -f /usr/NX/var/log/nxserver.log | python3 filter_warnings.py
