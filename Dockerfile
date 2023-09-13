@@ -82,7 +82,7 @@ RUN curl -fSL "http://download.nomachine.com/download/${NOMACHINE_BUILD}/Linux/$
     && apt-get clean \
     && apt-get autoclean \
     && apt-get remove -y wget \
-    && apt-get install -y sudo libxtst6 thunar firefox python3-pyqt5 at-spi2-core \
+    && apt-get install -y sudo libxtst6 thunar firefox at-spi2-core \
     && cp /opt/pycharm-community-${PYCHARM_VERSION}/bin/pycharm.png /usr/bin/pycharm.png \
     && cleanup
 

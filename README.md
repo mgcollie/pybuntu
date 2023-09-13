@@ -9,7 +9,6 @@ This project shows a simple example of how you can run an entire Desktop environ
 It's using Ubuntu 20.04 LTS and comes with the following pre-installed:
 - Python 3.10.13
 - Python 3.8.10
-- PyQT 5
 - Firefox 117.0
 
 You choose your version of Pycharm and Nomachine.  The Dockerfile will download and install them for you.
