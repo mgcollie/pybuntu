@@ -31,21 +31,20 @@ Some novel use cases for these would be (but aren't limited to):
 
 
 ## Getting started
+1. clone the repository
 ```
 git clone https://github.com/mgcollie/pybuntu.git
 cd pybuntu
 ```
-You'll then need to create a .env file and define the following variables:
-- PYCHARM_VERSION=<version>
-- USER=<somename>
-- PASSWORD=<somepassword>
-- NOMACHINE_PACKAGE_NAME=<packagename>
-- NOMACHINE_BUILD=<build>
+2. Make any edits you want to the .env file
 
-Then you'll be able to launch the container using this command
+
+3. Run the container
 ```
 docker-compose up --build -d
 ```
+
+4. Connect using your local NoMachine client
 Then fire up your local client of nomachine and configure it to connect to localhost:4000
 
 ![image.png](images/image.png)
