@@ -60,6 +60,7 @@ RUN apt-get install --no-install-recommends -y \
         xauth \
         curl \
         wget \
+        dbus \
     && mkdir -p /usr/share/backgrounds/ \
     && rm -rfv /usr/share/backgrounds/* \
     && apt remove -y light-locker \
