@@ -47,6 +47,6 @@ docker-compose up --build -d
 ```
 
 4. Connect using your local NoMachine client
-Then fire up your local client of nomachine and configure it to connect to localhost:4000
+Then fire up your local client of nomachine and configure it to connect to localhost:$NOMACHINE_PORT
 
 ![image.png](images/image.png)
