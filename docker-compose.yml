@@ -16,7 +16,6 @@ services:
             PASSWORD: ${PASSWORD}
             XDG_RUNTIME_DIR: /home/$NOMACHINE_USER
         ports:
-            - "4000:4000"
-            - "8080:8080"
+            - "${NOMACHINE_PORT}:4000"
         cap_add:
             - SYS_PTRACE
